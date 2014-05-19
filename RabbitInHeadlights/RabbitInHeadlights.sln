@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RabbitInHeadlights", "Rabbi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitsInCSharp", "RabbitsInCSharp\RabbitsInCSharp.csproj", "{FC438384-6174-47EE-8717-8DE2A1470C5D}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestExamples", "TestExamples\TestExamples.fsproj", "{D77E025F-12E5-45A9-87B0-5318478D2B2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FC438384-6174-47EE-8717-8DE2A1470C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC438384-6174-47EE-8717-8DE2A1470C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC438384-6174-47EE-8717-8DE2A1470C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77E025F-12E5-45A9-87B0-5318478D2B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77E025F-12E5-45A9-87B0-5318478D2B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77E025F-12E5-45A9-87B0-5318478D2B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77E025F-12E5-45A9-87B0-5318478D2B2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
