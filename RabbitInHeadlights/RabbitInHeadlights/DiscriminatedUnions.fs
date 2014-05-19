@@ -74,3 +74,12 @@ module DiscriminatedUnion =
     let jiro = Player("Throw", "Katana")
     let tree = Scenery
     let mempoWarrior = NPC("Chase")   
+
+
+    let FindPlayer character =
+        match character with
+        | Player (move , weapon ) -> printfn "Yes! you found the player with move %s and weappon: %s" move weapon
+        | _ -> printfn "didn't find it"
+
+    
+    FindPlayer tree
