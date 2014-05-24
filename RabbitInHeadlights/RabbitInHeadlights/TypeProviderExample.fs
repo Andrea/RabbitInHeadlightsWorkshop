@@ -5,7 +5,7 @@
 
 #r "PresentationFramework.dll"
 #r "System.Xaml"
-#r @"C:\Source\Rabbits\RabbitInHeadlights\packages\FSharp.Data.2.0.8\lib\portable-net40+sl5+wp8+win8\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.2.0.8\lib\portable-net40+sl5+wp8+win8\FSharp.Data.dll"
  
 #endif
 open System
@@ -13,12 +13,13 @@ open FSharp.Data
 open System.IO
  
  [<Literal>]
-let path = "C:\Source\Rabbits\IrelandProgrammingLanguages.csv"
+let path = @"..\..\IrelandProgrammingLanguages.csv"
 type Languages = FSharp.Data.CsvProvider<path>
  
 let split (text:string) =
     text.Split ','
     |> Seq.toList
+    
  
 let splitAndCount string  =
     let languages= split string
