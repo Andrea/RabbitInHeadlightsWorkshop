@@ -114,3 +114,6 @@ module DiscriminatedUnion =
     match num with 
     | None -> printfn "num is None"
     | Some x -> printfn "num is %i" x
+
+//TODO: Create a function that can feed different pets.. differnt pets need different food and drink, some dont need drink. 
+//      Make sure you deal with the case when there is no pets to feed
