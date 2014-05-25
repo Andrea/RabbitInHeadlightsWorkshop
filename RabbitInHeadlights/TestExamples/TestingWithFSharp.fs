@@ -2,7 +2,34 @@
 
 open NUnit.Framework
 open FsCheck
-module TestingSomething =
+open RabbitsInCSharp
+open Duality
+
+module ScoringTests =
+
+    let createValidScoreComponent =
+        let scoringComponent = new ScoreComponent();
+        scoringComponent.OnInit(new Component.InitContext())
+        scoringComponent, scoringComponent.Score
+
+    let validScoreIncrease = 50
+
+    [<Test>]
+    let ``Increases score by amount when less than multiplier threshold``() = 
+        let scoreComponent, oldScore = createValidScoreComponent                
+        scoreComponent.IncreaseScore(validScoreIncrease)
+        Assert.AreEqual(oldScore + validScoreIncrease , scoreComponent.Score)
+
+    [<Test>]
+    let ``Increases score with multiplier when over multiplier threshold``() = 
+        let scoreComponent, oldScore = createValidScoreComponent                
+        scoreComponent.MultiplierThresholds = [|validScoreIncrease; validScoreIncrease*5|]
+        scoreComponent.IncreaseScore(validScoreIncrease)
+        Assert.AreEqual(oldScore + validScoreIncrease*2, scoreComponent.Score)
+
+//TODO you write at least 4 more tests :D
+
+module TestingWithFsCheck =
 
     [<Test>]
     let ``True is true``() = 
@@ -11,8 +38,6 @@ module TestingSomething =
     [<Test>]
     let ``Reality``() =
         Assert.AreNotEqual(2,3)
-
-
 
     [<Test>]
     let ``Lets test a property with FsCheck``()=
