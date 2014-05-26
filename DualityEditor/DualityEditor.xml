@@ -1,0 +1,1226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DualityEditor</name>
+    </assembly>
+    <members>
+        <member name="F:Duality.Editor.Forms.CreateObjectDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.CreateObjectDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.CreateObjectDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.PropertyEditorMatching">
+            <summary>
+            Calculates a PropertyEditorAssignment priority for the given property Type in a certain context.
+            </summary>
+            <param name="propertyType"></param>
+            <param name="context"></param>
+            <returns>The priority which connects the given Type to the PropertyEditor. Return <see cref="F:Duality.Editor.PropertyEditorAssignmentAttribute.PriorityNone"/> for no assignment.</returns>
+        </member>
+        <member name="T:Duality.Editor.PropertyEditorAssignmentAttribute">
+            <summary>
+            This attribute is utilized to match PropertyEditors to the property Types they are supposed to edit.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.PropertyEditorAssignmentAttribute.#ctor(System.Type,System.Int32)">
+            <summary>
+            Creates a static PropertyEditor assignment to the specified property Type.
+            </summary>
+            <param name="propertyType"></param>
+            <param name="priority"></param>
+        </member>
+        <member name="M:Duality.Editor.PropertyEditorAssignmentAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Creates a dynamic PropertyEditor assignment based on the specified static <see cref="T:Duality.Editor.PropertyEditorMatching"/> method.
+            </summary>
+            <param name="methodHostType"></param>
+            <param name="staticMethodName"></param>
+        </member>
+        <member name="M:Duality.Editor.PropertyEditorAssignmentAttribute.MatchToProperty(System.Type,AdamsLair.WinForms.PropertyEditing.ProviderContext)">
+            <summary>
+            Determines the matching level between a PropertyEditor and the specified property Type.
+            </summary>
+            <param name="propertyType"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Duality.Editor.ConvertOperation.Operation.Convert">
+            <summary>
+            A simple conversion operation that does not affect any data.
+            Example: Retrieving Texture from Material.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ConvertOperation.Operation.CreateRes">
+            <summary>
+            A conversion that might create new resource data.
+            Example: Creating Material from Texture.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ConvertOperation.Operation.CreateObj">
+            <summary>
+            A conversion that might create new object data.
+            Example: Construct a GameObject out of a set of Resources.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.HighlightMode.Conceptual">
+            <summary>
+            Highlights an objects conceptual representation, e.g. flashing its entry in an object overview.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.HighlightMode.Spatial">
+            <summary>
+            Highlights an objects spatial location, e.g. focusing it spatially in a scene view.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.DualityEditorApp.Highlight(System.Object,Duality.Editor.ObjectSelection,Duality.Editor.HighlightMode)">
+            <summary>
+            Triggers a highlight event in the editor, to which the appropriate modules will
+            be able to react. This usually means flashing a certain tree view entry or similar.
+            </summary>
+            <param name="sender"></param>
+            <param name="obj"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="T:Duality.Editor.Properties.GeneralResCache">
+            <summary>
+            Since directly accessing code generated from .resx files will result in a deserialization on
+            each Resource access, this class allows cached Resource access.
+            </summary>
+        </member>
+        <member name="F:DualityEditor.Forms.SaveLayoutDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DualityEditor.Forms.SaveLayoutDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DualityEditor.Forms.SaveLayoutDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.Properties.GeneralRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.arrow_redo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.arrow_undo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_Advanced">
+            <summary>
+              Looks up a localized string similar to Advanced.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_Diagnostics">
+            <summary>
+              Looks up a localized string similar to Diagnostics.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_General">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_Graphics">
+            <summary>
+              Looks up a localized string similar to Graphics.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_Physics">
+            <summary>
+              Looks up a localized string similar to Physics.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Category_Sound">
+            <summary>
+              Looks up a localized string similar to Sound.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ColorWheel">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorArrowAction">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorArrowActionMove">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorArrowActionRotate">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorArrowActionScale">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorHandGrab">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.CursorHandGrabbing">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.DefaultEditorUserData">
+            <summary>
+              Looks up a localized string similar to &lt;UserData&gt;
+             &lt;EditorApp backups=&quot;True&quot; autosaves=&quot;ThirtyMinutes&quot; /&gt;
+             &lt;Plugin_CamView&gt;
+               &lt;CamView_0 perspective=&quot;Parallax&quot; focusDist=&quot;500&quot; bgColorArgb=&quot;4210752&quot; activeState=&quot;Duality.Editor.Plugins.CamView.CamViewStates.SceneEditorCamViewState&quot;&gt;
+                 &lt;states&gt;
+                   &lt;Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState&gt;
+                     &lt;activeLayers /&gt;
+                   &lt;/Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState&gt;
+                   &lt;Duality.Editor.Plugins.CamView.CamViewStates.RigidBod [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ErrorHandlersTemplate">
+             <summary>
+               Sucht eine lokalisierte Zeichenfolge, die using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            
+            using Duality;
+            using Duality.Serialization;
+            
+            namespace ROOTNAMESPACE.ErrorHandlers
+            {
+            	public class NewProjectErrorHandler : SerializeErrorHandler
+            	{
+            		public override void HandleError(SerializeError error)
+            		{
+            			ResolveTypeError resolveTypeError = error as ResolveTypeError;
+            			if (resolveTypeError != null)
+            			{
+            				string fixedTypeId = resolveTypeError.TypeId;
+            
+            				if (typeString.StartsWith(&quot;OLDROOTNAM [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+             </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.GamePluginTemplate">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.GameResTemplate">
+             <summary>
+               Looks up a localized string similar to /*
+             * A set of static helper classes that provide easy runtime access to the games resources.
+             * This file is auto-generated. Any changes made to it are lost as soon as Duality decides
+             * to regenerate it.
+             */
+            namespace GameRes
+            {
+            CONTENT
+            }
+            .
+             </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.HelpInfo_NotAvailable_Desc">
+            <summary>
+              Looks up a localized string similar to No information available..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.IconCog">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.IconNamespace">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.IconWorkingFolder">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ImageAppCreate">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ImageTemplateCurrent">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.ImageTemplateEmpty">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Language">
+            <summary>
+              Looks up a localized string similar to English.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_ConfigureLauncher">
+            <summary>
+              Looks up a localized string similar to Select which launcher application should be used for external game tests. By default, the Duality Launcher is used..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_DebugGame">
+            <summary>
+              Looks up a localized string similar to If you&apos;re using a professional version of Visual Studio, this action will run the Duality launcher and trigger a debug event that allows you to attach the debugger to your game before anything happens. You can achieve the same by clicking the &quot;Run&quot; button of your Core Plugin in Visual Studio itself..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_FormatUpdateAll">
+            <summary>
+              Looks up a localized string similar to This operation will load and re-save all existing Resources. Due to the serialization progress, all Resources will be guaranteed to use the same file format and to be up-to-date according to core plugin class definitions..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_NewProject">
+            <summary>
+              Looks up a localized string similar to Duality always works locally in a project folder. The New Project dialog will help you setting up a new one for your project..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_OpenProjectSource">
+            <summary>
+              Looks up a localized string similar to The project source code is where your game logic happens. To help you get started, Duality will create and open a suitable Visual Studio solution for you..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_ProfileGame">
+            <summary>
+              Looks up a localized string similar to Runs the game in profiling mode without VSync or any other frame rate limiting mechanism..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_RunGame">
+            <summary>
+              Looks up a localized string similar to Want to see how your game looks like in its release version? This will save all project data and run the external Duality launcher..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxFaster">
+            <summary>
+              Looks up a localized string similar to Increases the Sandboxes game speed. This will not cause it to update more often, but simulate a higher timestep in each update..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxPause">
+            <summary>
+              Looks up a localized string similar to Pausing the Sandbox will suspend any game updates. Until being unpaused, the Sandbox will behave as if it wasn&apos;t there..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxPlay">
+            <summary>
+              Looks up a localized string similar to Unlike &quot;Run Game&quot;, entering the Sandbox mode doesn&apos;t rely on the Duality Launcher and will instead run the game directly inside the editor. This allows you to test and debug your game in real time while at the same time providing full editing functionality. Note that you&apos;ll have to focus a Cam View in &quot;Game View&quot; mode in order to pass on keyboard and mouse input to the game..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxSlower">
+            <summary>
+              Looks up a localized string similar to Decreases the Sandboxes game speed. This will not cause it to update less often, but simulate a lower timestep in each update..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxStep">
+            <summary>
+              Looks up a localized string similar to A Sandbox step will cause the game to advance exactly one standard frame..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SandboxStop">
+            <summary>
+              Looks up a localized string similar to When leaving the Sandbox mode, the current Scene will be reset to its original state..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemInfo_SaveAll">
+            <summary>
+              Looks up a localized string similar to This will save all project data, i.e. all existing Resources. If you take a look at the Project View, you might notice that some Resources are written italic - these are the ones that have been changed without being saved yet..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_About">
+            <summary>
+              Looks up a localized string similar to About.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_ConfigureLauncher">
+            <summary>
+              Looks up a localized string similar to Select Launcher....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_NewProject">
+            <summary>
+              Looks up a localized string similar to New Project....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_ProfileGame">
+            <summary>
+              Looks up a localized string similar to Profile Game.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_Quit">
+            <summary>
+              Looks up a localized string similar to Quit.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_Redo">
+            <summary>
+              Looks up a localized string similar to Redo: {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_RedoEmpty">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_SandboxFaster">
+            <summary>
+              Looks up a localized string similar to Increase Speed.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_SandboxSlower">
+            <summary>
+              Looks up a localized string similar to Decrease Speed.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_Undo">
+            <summary>
+              Looks up a localized string similar to Undo: {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuItemName_UndoEmpty">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_Edit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_File">
+            <summary>
+              Looks up a localized string similar to File.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_Help">
+            <summary>
+              Looks up a localized string similar to Help.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_Run">
+            <summary>
+              Looks up a localized string similar to Run.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_Settings">
+            <summary>
+              Looks up a localized string similar to Settings.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_Tools">
+            <summary>
+              Looks up a localized string similar to Tools.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.MenuName_View">
+            <summary>
+              Looks up a localized string similar to View.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_CantImport_Caption">
+            <summary>
+              Looks up a localized string similar to Can&apos;t import file.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_CantImport_Text">
+            <summary>
+              Looks up a localized string similar to Can&apos;t import file &apos;{0}&apos;. The files format is not supported..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmBreakPrefabLink_Caption">
+            <summary>
+              Looks up a localized string similar to Break Prefab Link?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmBreakPrefabLink_Desc">
+            <summary>
+              Looks up a localized string similar to This action will break the objects Prefab Link. Proceed?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmDeleteSelectedObjects_Caption">
+            <summary>
+              Looks up a localized string similar to Delete selected objects?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmDeleteSelectedObjects_Text">
+            <summary>
+              Looks up a localized string similar to Do you really want to delete the selected objects?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmQuit_Caption">
+            <summary>
+              Looks up a localized string similar to Really quit?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmQuit_Desc">
+            <summary>
+              Looks up a localized string similar to Do you really want to quit?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmQuitUnsaved_Caption">
+            <summary>
+              Looks up a localized string similar to Really quit?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmQuitUnsaved_Desc">
+            <summary>
+              Looks up a localized string similar to The following Resources have been modified without saving:{0}Do you want to save them before exiting?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmQuitUnsaved_Desc_More">
+            <summary>
+              Looks up a localized string similar to [ and {0} more ].
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmReloadResource_Caption">
+            <summary>
+              Looks up a localized string similar to Reload Resource?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ConfirmReloadResource_Text">
+            <summary>
+              Looks up a localized string similar to The currently active Resource &apos;{0}&apos; has been modified externally. Do you want to reload it from file? Any unsaved changes might be lost..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_EnterSandboxUnsavedScene_Caption">
+            <summary>
+              Looks up a localized string similar to Save current Scene?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_EnterSandboxUnsavedScene_Desc">
+            <summary>
+              Looks up a localized string similar to You are about to enter Sandbox mode although the current Scene is temporary, so it won&apos;t be restored when leaving Sandbox mode. Do you want to make it restorable by saving it before?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ErrorPerformBigTask_Caption">
+            <summary>
+              Looks up a localized string similar to Failed to perform task.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ErrorPerformBigTask_Desc">
+            <summary>
+              Looks up a localized string similar to An error occurred while performing task &apos;{0}&apos;: {1}{2}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ErrorReloadCorePlugin_Caption">
+            <summary>
+              Looks up a localized string similar to Can&apos;t reload core plugin.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ErrorReloadCorePlugin_Desc">
+            <summary>
+              Looks up a localized string similar to An error occurred reloading Duality core plugins: {0}{1}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ImportConfirmOverwrite_Caption">
+            <summary>
+              Looks up a localized string similar to Overwrite file?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_ImportConfirmOverwrite_Text">
+            <summary>
+              Looks up a localized string similar to Importing file &apos;{0}&apos; would overwrite an already imported file. Do you want to continue?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_InstallNewTemplate_Caption">
+            <summary>
+              Looks up a localized string similar to Install new Template?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Msg_InstallNewTemplate_Desc">
+            <summary>
+              Looks up a localized string similar to The Template you selected is not located inside your global Template directory. Do you wish to send it there for future usage?.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.OpenTemplateDialog_Filters">
+            <summary>
+              Looks up a localized string similar to Project Templates (*.zip)|*.zip.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.OpenTemplateDialog_Title">
+            <summary>
+              Looks up a localized string similar to Select Project Template...
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.PropertyGrid_N_Objects">
+            <summary>
+              Looks up a localized string similar to {0} objects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.SelectNewProjectFolderDialog_Desc">
+            <summary>
+              Looks up a localized string similar to Select the folder in which a new project will be created below..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskBarOverlay_ReloadCorePlugin_Desc">
+            <summary>
+              Looks up a localized string similar to Reloading core plugins....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskChangeDataFormat_Caption">
+            <summary>
+              Looks up a localized string similar to Changing project data format....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskChangeDataFormat_Desc">
+            <summary>
+              Looks up a localized string similar to The project data format has been changed to {0}. Existing Resource files will be converted shortly..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskFormatUpdateAll_Caption">
+            <summary>
+              Looks up a localized string similar to Updating all Resources....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskFormatUpdateAll_Desc">
+            <summary>
+              Looks up a localized string similar to All existing Resource files are being updated according to the current file format specifications..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskRenameContentRefs_Caption">
+            <summary>
+              Looks up a localized string similar to Relocating ContentRefs....
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.TaskRenameContentRefs_Desc">
+            <summary>
+              Looks up a localized string similar to One or more Resources have been moved or renamed. Duality is searching for references to these Resources in order to update them..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Template_Current_Desc">
+            <summary>
+              Looks up a localized string similar to Creates a new project by cloning the current one..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Template_Current_Name">
+            <summary>
+              Looks up a localized string similar to Current Project.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Template_Empty_Desc">
+            <summary>
+              Looks up a localized string similar to A project without any content..
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.Template_Empty_Name">
+            <summary>
+              Looks up a localized string similar to Empty Project.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ApplyToPrefab">
+            <summary>
+              Looks up a localized string similar to Apply {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ApplyToPrefabMulti">
+            <summary>
+              Looks up a localized string similar to Apply  {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_BreakPrefabLink">
+            <summary>
+              Looks up a localized string similar to Unlink {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_BreakPrefabLinkMulti">
+            <summary>
+              Looks up a localized string similar to Unlink  {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CloneGameObject">
+            <summary>
+              Looks up a localized string similar to Clone {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CloneGameObjectMulti">
+            <summary>
+              Looks up a localized string similar to Clone {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CreateComponent">
+            <summary>
+              Looks up a localized string similar to Create {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CreateComponentMulti">
+            <summary>
+              Looks up a localized string similar to Create {0} Components.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CreateGameObject">
+            <summary>
+              Looks up a localized string similar to Create {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_CreateGameObjectMulti">
+            <summary>
+              Looks up a localized string similar to Create {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_DeleteComponent">
+            <summary>
+              Looks up a localized string similar to Delete {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_DeleteComponentMulti">
+            <summary>
+              Looks up a localized string similar to Delete {0} Components.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_DeleteGameObject">
+            <summary>
+              Looks up a localized string similar to Delete {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_DeleteGameObjectMulti">
+            <summary>
+              Looks up a localized string similar to Delete {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_EditProperty">
+            <summary>
+              Looks up a localized string similar to Edit {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_Macro">
+            <summary>
+              Looks up a localized string similar to Macro: {0} Actions.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ResetComponent">
+            <summary>
+              Looks up a localized string similar to Reset {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ResetComponentMulti">
+            <summary>
+              Looks up a localized string similar to Reset {0} Components.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ResetGameObject">
+            <summary>
+              Looks up a localized string similar to Revert {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_ResetGameObjectMulti">
+            <summary>
+              Looks up a localized string similar to Revert {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetComponentParent">
+            <summary>
+              Looks up a localized string similar to Re-Parent {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetComponentParentMulti">
+            <summary>
+              Looks up a localized string similar to Re-Parent {0} Components.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetGameObjectName">
+            <summary>
+              Looks up a localized string similar to Rename {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetGameObjectNameMulti">
+            <summary>
+              Looks up a localized string similar to Rename {0} GameObjects.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetGameObjectParent">
+            <summary>
+              Looks up a localized string similar to Re-Parent {0}.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.GeneralRes.UndoRedo_SetGameObjectParentMulti">
+            <summary>
+              Looks up a localized string similar to Re-Parent {0} GameObjects.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.AboutBox.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.AboutBox.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.AppRunningDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.AppRunningDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.AppRunningDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.NewProjectDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.NewProjectDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.NewProjectDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.ProcessingBigTaskDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.ProcessingBigTaskDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.ProcessingBigTaskDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.MainForm.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.MainForm.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.EditorPlugin.LoadPlugin">
+            <summary>
+            This method is called as soon as the plugins assembly is loaded. Initializes the plugins internal data.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.EditorPlugin.InitPlugin(Duality.Editor.Forms.MainForm)">
+            <summary>
+            This method is called when all plugins and the editors user data and layout are loaded. May initialize GUI.
+            </summary>
+            <param name="main"></param>
+        </member>
+        <member name="M:Duality.Editor.EditorPlugin.SaveUserData(System.Xml.Linq.XElement)">
+            <summary>
+            Saves the plugins user data to the provided Xml Node.
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:Duality.Editor.EditorPlugin.LoadUserData(System.Xml.Linq.XElement)">
+            <summary>
+            Loads the plugins user data from the provided Xml Node.
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:Duality.Editor.EditorPlugin.DeserializeDockContent(System.Type)">
+            <summary>
+            Called when initializing the editors layout and trying to set up one of this plugins DockContent.
+            Returns an IDockContent instance of the specified dockContentType. May return already existing
+            DockContent, a new an pre-setup instance or null as default.
+            </summary>
+            <param name="dockContentType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Duality.Editor.EditorPlugin.Id">
+            <summary>
+            The Plugins ID. This should be unique.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.ReloadCorePluginDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.ReloadCorePluginDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.ReloadCorePluginDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.Forms.SplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Forms.SplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.Editor.Forms.SplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.ExtMethodsForm">
+            <summary>
+            Provides extension methods for <see cref="T:System.Windows.Forms.Form"/>.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.ExtMethodsForm.SetTaskbarOverlayIcon(System.Windows.Forms.Form,System.Drawing.Icon,System.String)">
+            <summary>
+            Draws the specified overlay icon over this form's taskbar button.
+            </summary>
+            <param name="form">The form.</param>
+            <param name="icon">The overlay icon.</param>
+            <param name="description">The overlay icon's description.</param>
+        </member>
+        <member name="M:Duality.Editor.ExtMethodsForm.SetTaskbarProgress(System.Windows.Forms.ProgressBar)">
+            <summary>
+            Sets the progress bar in the containing form's taskbar button
+            to this progress bar's progress.
+            </summary>
+            <param name="progressBar">The progress bar.</param>
+        </member>
+        <member name="M:Duality.Editor.ExtMethodsForm.SetTaskbarProgress(System.Windows.Forms.ToolStripProgressBar)">
+            <summary>
+            Sets the progress bar in the containing form's taskbar button
+            to this toolstrip progress bar's progress.
+            </summary>
+            <param name="progressBar">The progress bar.</param>
+        </member>
+        <member name="M:Duality.Editor.ExtMethodsForm.SetTaskbarProgress(System.Windows.Forms.Form,System.Single)">
+            <summary>
+            Sets the progress bar of this form's taskbar button to the
+            specified percentage.
+            </summary>
+            <param name="form">The form.</param>
+            <param name="percent">The progress percentage.</param>
+        </member>
+        <member name="M:Duality.Editor.ExtMethodsForm.SetTaskbarProgressState(System.Windows.Forms.Form,Duality.Editor.ThumbnailProgressState)">
+            <summary>
+            Sets the progress bar of this form's taskbar button to the
+            specified state.
+            </summary>
+            <param name="form">The form.</param>
+            <param name="state">The taskbar progress state.</param>
+        </member>
+        <member name="T:Duality.Editor.ThumbnailProgressState">
+            <summary>
+            Represents the thumbnail progress bar state.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ThumbnailProgressState.NoProgress">
+            <summary>
+            No progress is displayed.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ThumbnailProgressState.Indeterminate">
+            <summary>
+            The progress is indeterminate (marquee).
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ThumbnailProgressState.Normal">
+            <summary>
+            Normal progress is displayed.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ThumbnailProgressState.Error">
+            <summary>
+            An error occurred (red).
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.ThumbnailProgressState.Paused">
+            <summary>
+            The operation is paused (yellow).
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.NativeMethods.FileOperationFlags">
+            <summary>
+            Possible flags for the SHFileOperation method.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_SILENT">
+            <summary>
+            Do not show a dialog during the process
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_NOCONFIRMATION">
+            <summary>
+            Do not ask the user to confirm selection
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_ALLOWUNDO">
+            <summary>
+            Delete the file to the recycle bin.  (Required flag to send a file to the bin
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_SIMPLEPROGRESS">
+            <summary>
+            Do not show the names of the files or folders that are being recycled.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_NOERRORUI">
+            <summary>
+            Surpress errors, if any occur during the process.
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationFlags.FOF_WANTNUKEWARNING">
+            <summary>
+            Warn if files are too big to fit in the recycle bin and will need
+            to be deleted completely.
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.NativeMethods.FileOperationType">
+            <summary>
+            File Operation Function Type for SHFileOperation
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationType.FO_MOVE">
+            <summary>
+            Move the objects
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationType.FO_COPY">
+            <summary>
+            Copy the objects
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationType.FO_DELETE">
+            <summary>
+            Delete (or recycle) the objects
+            </summary>
+        </member>
+        <member name="F:Duality.Editor.NativeMethods.FileOperationType.FO_RENAME">
+            <summary>
+            Rename the object(s)
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.Program.Main(System.String[])">
+            <summary>
+            Der Haupteinstiegspunkt für die Anwendung.
+            </summary>
+        </member>
+        <member name="T:Duality.Editor.RecycleBin">
+            <summary>
+            Send files directly to the recycle bin.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.RecycleBin.Send(System.String,Duality.Editor.NativeMethods.FileOperationFlags)">
+            <summary>
+            Send file to recycle bin
+            </summary>
+            <param name="path">Location of directory or file to recycle</param>
+            <param name="flags">FileOperationFlags to add in addition to FOF_ALLOWUNDO</param>
+        </member>
+        <member name="M:Duality.Editor.RecycleBin.Send(System.String)">
+            <summary>
+            Send file to recycle bin.  Display dialog, display warning if files are too big to fit (FOF_WANTNUKEWARNING)
+            </summary>
+            <param name="path">Location of directory or file to recycle</param>
+        </member>
+        <member name="M:Duality.Editor.RecycleBin.SendSilent(System.String)">
+            <summary>
+            Send file silently to recycle bin.  Surpress dialog, surpress errors, delete if too large.
+            </summary>
+            <param name="path">Location of directory or file to recycle</param>
+        </member>
+        <member name="T:Duality.Editor.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.add">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.application_bug">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.application_go">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.application_stopwatch">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.arrow_refresh">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.control_pause_blue">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.control_play_blue">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.control_step_blue">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.control_stop_blue">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.cross">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.disk_multiple">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.drive_disk">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.DualitorLogoHalfSize">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.DualityIcon256">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.DualityIcon48">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.icon_color">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.page_code">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.page_gear">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.page_white_csharp">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.Properties.Resources.working_bigtask">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>
