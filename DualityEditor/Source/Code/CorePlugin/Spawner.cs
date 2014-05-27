@@ -12,7 +12,7 @@ namespace Debug
 	{
 		[NonSerialized]
 		private int _lastSpawnTime;
-
+		
 		public float SpawnIntervalSeconds { get; set; }
 
 		public void OnUpdate()

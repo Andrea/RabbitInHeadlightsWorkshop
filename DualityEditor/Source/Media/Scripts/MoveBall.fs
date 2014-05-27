@@ -8,4 +8,4 @@ open OpenTK
         inherit DualityScript()
         
             override this.Update () =                
-                this.GameObj.Transform.Pos <- this.GameObj.Transform.Pos + new Vector3(0.0f,0.0f,1.0f)
+                this.GameObj.Transform.Pos <- this.GameObj.Transform.Pos + new Vector3(0.0f,0.0f,2.0f)

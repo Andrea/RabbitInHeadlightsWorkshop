@@ -1,10 +1,8 @@
 ﻿using System;
 using Duality;
-using Duality.Components;
 using Duality.Components.Renderers;
 using Duality.Resources;
 using OpenTK;
-using OpenTK.Graphics.ES11;
 using OpenTK.Input;
 
 namespace Debug
