@@ -48,7 +48,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
 <!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.440885416666667" DockTopPortion="0.25" DockBottomPortion="0.364213197969543" ActiveDocumentPane="6" ActivePane="-1">
+<DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.440885416666667" DockTopPortion="0.25" DockBottomPortion="0.364213197969543" ActiveDocumentPane="6" ActivePane="6">
   <Contents Count="5">
     <Content ID="0" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="Duality.Editor.Plugins.ProjectView.ProjectFolderView" AutoHidePortion="0.440885416666667" IsHidden="False" IsFloat="False" />
