@@ -2,7 +2,7 @@
 <UserData>
   <EditorApp backups="True" autosaves="ThirtyMinutes" />
   <Plugin_CamView>
-    <CamView_0 perspective="Parallax" focusDist="500" bgColorArgb="4210752" activeState="Duality.Editor.Plugins.CamView.CamViewStates.SceneEditorCamViewState">
+    <CamView_0 perspective="Parallax" focusDist="500" bgColorArgb="4210752" activeState="Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState">
       <states>
         <Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState>
           <activeLayers />

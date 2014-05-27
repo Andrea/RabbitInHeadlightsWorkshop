@@ -7,8 +7,10 @@ namespace GameRes
 {
 	public static class Data {
 		public static class Prefabs {
+			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Mole_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Mole.Prefab.res"); }}
 			public static void LoadAll() {
+				Brick_Prefab.MakeAvailable();
 				Mole_Prefab.MakeAvailable();
 			}
 		}
