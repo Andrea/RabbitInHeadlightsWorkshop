@@ -59,8 +59,8 @@
   </Target>
   <ItemGroup>
     <None Include="packages.config" />
-    <Compile Include="..\..\..\Media\Scripts\MoveBall.fs">
-      <Link>MoveBall.fs</Link>
+    <Compile Include="..\..\..\Media\Scripts\DoubleScorePowerUp.fs">
+      <Link>DoubleScorePowerUp.fs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +104,13 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CorePlugin\CorePlugin.csproj">
+      <Name>CorePlugin</Name>
+      <Project>{afe883f3-72b4-4c7c-a1d1-44edc09c8f6e}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

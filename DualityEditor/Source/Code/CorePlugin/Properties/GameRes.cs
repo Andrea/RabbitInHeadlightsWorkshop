@@ -15,11 +15,11 @@ namespace GameRes
 			}
 		}
 		public static class Scripts {
-			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> MoveBall_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\MoveBall.FSharpScript.res"); }}
-			public static Duality.ContentRef<ScriptingPlugin.Resources.CSharpScript> Spawner_CSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.CSharpScript>(@"Data\Scripts\Spawner.CSharpScript.res"); }}
+			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> DoubleScorePowerUp_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\DoubleScorePowerUp.FSharpScript.res"); }}
+			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> SlowBallPowerUp_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\SlowBallPowerUp.FSharpScript.res"); }}
 			public static void LoadAll() {
-				MoveBall_FSharpScript.MakeAvailable();
-				Spawner_CSharpScript.MakeAvailable();
+				DoubleScorePowerUp_FSharpScript.MakeAvailable();
+				SlowBallPowerUp_FSharpScript.MakeAvailable();
 			}
 		}
 		public static Duality.ContentRef<Duality.Resources.Scene> Scene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scene.Scene.res"); }}

@@ -31,18 +31,20 @@ module ScoringTests =
 
 module TestingWithFsCheck =
 
-    [<Test>]
-    let ``True is true``() = 
-        Assert.True(true)
-
-    [<Test>]
-    let ``Reality``() =
-        Assert.AreNotEqual(2,3)
 
     [<Test>]
     let ``Lets test a property with FsCheck``()=
+        let revRevIsOrig (xs) = List.rev(List.rev xs) = xs
+        Check.VerboseThrowOnFailure revRevIsOrig 
+
+    [<Test>]
+    let ``Lets test a property with FsCheck specific type``()=
         let revRevIsOrig (xs:list<int>) = List.rev(List.rev xs) = xs
-        Check.QuickThrowOnFailure revRevIsOrig 
+        Check.VerboseThrowOnFailure revRevIsOrig 
+
+// TODO use QuickCheck to test the ScoreComponent
+
+
 
 module RandomDataWithFsCheck =
 
