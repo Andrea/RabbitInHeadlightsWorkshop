@@ -58,6 +58,9 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <ItemGroup>
+    <Compile Include="..\..\..\Media\Scripts\ColoursPowerUp.fs">
+      <Link>Scripts\ColoursPowerUp.fs</Link>
+    </Compile>
     <None Include="packages.config" />
     <Compile Include="..\..\..\Media\Scripts\DoubleScorePowerUp.fs">
       <Link>DoubleScorePowerUp.fs</Link>

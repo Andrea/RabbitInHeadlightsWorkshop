@@ -15,9 +15,11 @@ namespace GameRes
 			}
 		}
 		public static class Scripts {
+			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> ColoursPowerUp_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\ColoursPowerUp.FSharpScript.res"); }}
 			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> DoubleScorePowerUp_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\DoubleScorePowerUp.FSharpScript.res"); }}
 			public static Duality.ContentRef<ScriptingPlugin.Resources.FSharpScript> SlowBallPowerUp_FSharpScript { get { return Duality.ContentProvider.RequestContent<ScriptingPlugin.Resources.FSharpScript>(@"Data\Scripts\SlowBallPowerUp.FSharpScript.res"); }}
 			public static void LoadAll() {
+				ColoursPowerUp_FSharpScript.MakeAvailable();
 				DoubleScorePowerUp_FSharpScript.MakeAvailable();
 				SlowBallPowerUp_FSharpScript.MakeAvailable();
 			}
