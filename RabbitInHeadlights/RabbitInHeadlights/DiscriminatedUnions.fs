@@ -9,7 +9,6 @@ let answer = 42
 // what happens if you try to change answer to be a string?
 
 
-
 // Binding to a value
 let add x y = y + x
 
@@ -22,7 +21,8 @@ let split (phrase:string) =
     
 printfn "%A" (split "Something something something, dark side!" )
 
-//TODO:How would you change the function above so that it takes two strings, make sure you call the function (it doesn't matter if the second parameter is not used
+//TODO:How would you change the function above so that it takes two strings, make sure you call the function (it doesn't matter if the second parameter is not used)
+// show tupled vs separate
 
 
 //TODO: Now change the function so that the function takes the two parameters and returns the second string (i.e. if you passed "a b" and "c d" the function should return ["c"; "d"]
@@ -33,13 +33,18 @@ printfn "%A" (split "Something something something, dark side!" )
 let firstHundred = [0..100]
 
 // TODO: define an empty f# list, can you change add items after declaring it?
+//                                       let mutable empty : char list= []
 
-
+// how to append at the end of list
 
 // List comprehensions
 let doubled = List.map (fun x -> x * 2) firstHundred
 
-//TODO: find one of the many other list comprehensions and transform the firstHundred list into something else amazing and wonderful, the (coolest and fastest) gets a prize
+(*
+TODO: find one of the many other list comprehensions and transform the 
+firstHundred list into something else amazing and wonderful, 
+the (coolest and fastest) gets a prize  
+*)
 
 
 
@@ -80,9 +85,6 @@ module UnitOfMeasure =
 //TODO: Create Miles and Kilometers Unit of measure, create a function to convert Kilometers to miles, :D
 
 
-
-
-
 module DiscriminatedUnion =
 
 // DU
@@ -98,7 +100,7 @@ module DiscriminatedUnion =
     let tree = Scenery
     let mempoWarrior = NPC("Chase")   
 
-
+    // Pattern matching
     let FindPlayer character =
         match character with
         | Player (move , weapon ) -> printfn "Yes! you found the player with move %s and weappon: %s" move weapon

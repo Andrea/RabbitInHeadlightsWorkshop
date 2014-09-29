@@ -10,7 +10,7 @@
         printfn "Name is %s, number %i --" (fst personInfo) (snd personInfo)
 
 
-    //more type inference with tuples
+    //more type inference with tuples interop with .net types
     open System.Collections.Concurrent
 
     let convert =

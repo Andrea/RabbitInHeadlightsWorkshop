@@ -2,10 +2,10 @@
 
 //Type providers
 #if INTERACTIVE
-#load "..\packages\FSharp.Charting.0.90.7\FSharp.Charting.fsx"
+#load "..\packages\FSharp.Charting.0.90.6\FSharp.Charting.fsx"
 #r "PresentationFramework.dll"
 #r "System.Xaml"
-#r @"..\packages\FSharp.Data.2.0.14\lib\portable-net40+sl5+wp8+win8\FSharp.Data.dll"
+#r @"..\packages\FSharp.Data.2.0.8\lib\portable-net40+sl5+wp8+win8\FSharp.Data.dll"
 System.IO.Directory.SetCurrentDirectory( __SOURCE_DIRECTORY__)
 #endif
 open System
